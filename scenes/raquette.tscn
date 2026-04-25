@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cv3jxlp2ij6po"]
+
+[ext_resource type="Script" uid="uid://dxgpbx57w230m" path="res://scripts/raquette_default_script.gd" id="1_0fbxb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ou0g"]
+size = Vector2(40, 176)
+
+[node name="Raquette" type="CharacterBody2D" unique_id=504247064]
+script = ExtResource("1_0fbxb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1397126220]
+offset_left = -20.0
+offset_top = -88.0
+offset_right = 20.0
+offset_bottom = 88.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=825110465]
+shape = SubResource("RectangleShape2D_1ou0g")

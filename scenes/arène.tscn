@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ce8auuqbtnola"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6nkj"]
+size = Vector2(1152, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uobh6"]
+size = Vector2(18, 622)
+
+[node name="Arène" type="Node2D" unique_id=1607862885]
+
+[node name="Mur-haut" type="StaticBody2D" parent="." unique_id=522242018]
+position = Vector2(0, 4)
+
+[node name="ColorRect" type="ColorRect" parent="Mur-haut" unique_id=868257378]
+offset_top = -4.0
+offset_right = 1152.0
+offset_bottom = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mur-haut" unique_id=541835551]
+position = Vector2(576, 8)
+shape = SubResource("RectangleShape2D_y6nkj")
+debug_color = Color(0, 0.5803922, 0.80784315, 0.36862746)
+
+[node name="Mur-bas" type="StaticBody2D" parent="." unique_id=1708705803]
+position = Vector2(0, 624)
+
+[node name="ColorRect" type="ColorRect" parent="Mur-bas" unique_id=445846024]
+offset_top = -4.0
+offset_right = 1152.0
+offset_bottom = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mur-bas" unique_id=476483446]
+position = Vector2(576, 8)
+shape = SubResource("RectangleShape2D_y6nkj")
+debug_color = Color(0, 0.5803922, 0.80784315, 0.36862746)
+
+[node name="Goal-gauche" type="Area2D" parent="." unique_id=2078662316]
+position = Vector2(0, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal-gauche" unique_id=60389077]
+position = Vector2(-1, 297)
+shape = SubResource("RectangleShape2D_uobh6")
+
+[node name="Goal-droite" type="Area2D" parent="." unique_id=1779081657]
+position = Vector2(1154, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal-droite" unique_id=1342415684]
+position = Vector2(-1, 295)
+shape = SubResource("RectangleShape2D_uobh6")

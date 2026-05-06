@@ -36,6 +36,7 @@ debug_color = Color(0, 0.5803922, 0.80784315, 0.36862746)
 
 [node name="Goal-gauche" type="Area2D" parent="." unique_id=2078662316]
 position = Vector2(0, 24)
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal-gauche" unique_id=60389077]
 position = Vector2(-1, 297)
@@ -43,6 +44,7 @@ shape = SubResource("RectangleShape2D_uobh6")
 
 [node name="Goal-droite" type="Area2D" parent="." unique_id=1779081657]
 position = Vector2(1154, 24)
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal-droite" unique_id=1342415684]
 position = Vector2(-1, 295)

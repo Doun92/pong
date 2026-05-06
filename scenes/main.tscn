@@ -6,13 +6,22 @@
 script = ExtResource("1_jyhfs")
 
 [node name="pvp_button" type="Button" parent="." unique_id=184187683]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 480.0
+offset_top = 168.0
+offset_right = 649.0
+offset_bottom = 199.0
+text = "Joueur contre Joueur"
 
 [node name="pve_button" type="Button" parent="." unique_id=1805426425]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 456.0
+offset_top = 304.0
+offset_right = 666.0
+offset_bottom = 335.0
+text = "Joueur contre l'ordinateur"
 
 [node name="exit_button" type="Button" parent="." unique_id=1011793485]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 504.0
+offset_top = 496.0
+offset_right = 614.0
+offset_bottom = 527.0
+text = "Quitter le jeu"

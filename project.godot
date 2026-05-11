@@ -15,6 +15,10 @@ run/main_scene="uid://b8jse14elm3fb"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameData="*uid://d3hkbegvybvxi"
+
 [input]
 
 joueur-1-haut={

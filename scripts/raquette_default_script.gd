@@ -5,12 +5,15 @@ extends CharacterBody2D
 const SPEED = 200
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("joueur-" + str(joueur_numero) + "-haut"):
-		velocity.y = -SPEED
-	elif Input.is_action_pressed("joueur-" + str(joueur_numero) + "-bas"):
-		velocity.y = SPEED
+	if joueur_numero == 2 and GameData.game_type == "pve":
+		pass
 	else:
-		velocity.y = 0
+		if Input.is_action_pressed("joueur-" + str(joueur_numero) + "-haut"):
+			velocity.y = -SPEED
+		elif Input.is_action_pressed("joueur-" + str(joueur_numero) + "-bas"):
+			velocity.y = SPEED
+		else:
+			velocity.y = 0
 	velocity.x = 0
 
 	move_and_slide()

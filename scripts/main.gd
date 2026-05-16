@@ -13,10 +13,12 @@ func _process(delta: float) -> void:
 
 func _on_pvp_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/partie.tscn")
+	GameData.game_type = "pvp"
 
 func _on_pve_button_pressed() -> void:
-	pass # Replace with function body.
+	GameData.game_type = "pve"
+	get_tree().change_scene_to_file("res://scenes/partie.tscn")
 
 
 func _on_exit_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

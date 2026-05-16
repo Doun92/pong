@@ -4,7 +4,7 @@ var SPEED = 350
 const MAX_SPEED = 700
 var direction = Vector2(1, 0)
 
-func début_échange(gauche_droite:int) -> void:
+func début_échange(gauche_droite:int) -> void:	
 	direction.y = 0
 	SPEED = 350
 	if gauche_droite == 0:
@@ -24,6 +24,9 @@ func _ready() -> void:
 	début_échange(randi_range(0, 1))
 
 func _physics_process(delta: float) -> void:
+	if GameData.game_type == "pve":
+		GameData.position_ball_y = position.y
+	
 	velocity = direction * SPEED
 	move_and_slide()
 	if get_slide_collision_count() > 0:

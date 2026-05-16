@@ -10,6 +10,8 @@ func _end_game(player:String) -> void:
 		$final.text = "Player 2 won !"
 	$Ball.SPEED = 0
 	$redo_button.visible = true
+	$exit_button.visible = true
+	$retour_menu.visible = true
 	
 func _on_goal(body, goal:String) -> void:
 	if body.name == "Ball":
@@ -47,3 +49,13 @@ func _on_redo_button_pressed() -> void:
 	$"Joueur 2".position = Vector2(1054.0, 320.0)
 	$final.text = ""
 	$redo_button.visible = false
+	$exit_button.visible = false
+	$retour_menu.visible = false
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()
+
+
+func _on_retour_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")

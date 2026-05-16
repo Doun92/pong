@@ -52,4 +52,22 @@ offset_right = 640.0
 offset_bottom = 352.0
 text = "Recommencer ?"
 
+[node name="exit_button" type="Button" parent="." unique_id=820926263]
+visible = false
+offset_left = 520.0
+offset_top = 400.0
+offset_right = 630.0
+offset_bottom = 431.0
+text = "Quitter le jeu"
+
+[node name="retour_menu" type="Button" parent="." unique_id=1082877066]
+visible = false
+offset_left = 480.0
+offset_top = 224.0
+offset_right = 666.0
+offset_bottom = 255.0
+text = "Retour au menu du jeu"
+
 [connection signal="pressed" from="redo_button" to="." method="_on_redo_button_pressed"]
+[connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="retour_menu" to="." method="_on_retour_menu_pressed"]

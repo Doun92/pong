@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8jse14elm3fb"]
 
 [ext_resource type="Script" uid="uid://byx23t3ydce7" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="AudioStream" uid="uid://dyrq2rx0xt0jc" path="res://sons/background/dream-protocol-ping-pong-classic-arcade-game-116818.mp3" id="2_0wfyh"]
 
 [node name="Main" type="Node2D" unique_id=936958252]
 script = ExtResource("1_jyhfs")
@@ -25,6 +26,12 @@ offset_top = 496.0
 offset_right = 614.0
 offset_bottom = 527.0
 text = "Quitter le jeu"
+
+[node name="musique de fond" type="AudioStreamPlayer2D" parent="." unique_id=328582399]
+unique_name_in_owner = true
+stream = ExtResource("2_0wfyh")
+volume_db = 2.0
+autoplay = true
 
 [connection signal="pressed" from="pvp_button" to="." method="_on_pvp_button_pressed"]
 [connection signal="pressed" from="pve_button" to="." method="_on_pve_button_pressed"]

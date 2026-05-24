@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bkgsgplmdrdk4"]
 
 [ext_resource type="Script" uid="uid://buucjquw0hito" path="res://scripts/ball_default_script.gd" id="1_7s4qf"]
+[ext_resource type="AudioStream" uid="uid://jbhwsvwrcb23" path="res://sons/effets/bruit_choc.mp3" id="2_cxlvu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
 
@@ -12,3 +13,9 @@ script = ExtResource("1_7s4qf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1649807884]
 shape = SubResource("CircleShape2D_7s4qf")
+
+[node name="collision_sound" type="AudioStreamPlayer2D" parent="." unique_id=195426297]
+stream = ExtResource("2_cxlvu")
+volume_db = -7.561
+pitch_scale = 0.93
+attenuation = 5.8563437

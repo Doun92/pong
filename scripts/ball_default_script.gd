@@ -39,3 +39,4 @@ func _physics_process(delta: float) -> void:
 			SPEED = min(SPEED * 1.2, MAX_SPEED)
 		elif touched_body.name == "Mur-haut" or touched_body.name == "Mur-bas":
 			direction = direction.bounce(collision.get_normal())
+		$collision_sound.play()

@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-var SPEED = 350
-const MAX_SPEED = 700
-var direction = Vector2(1, 0)
+var SPEED = 350 				# Vitesse initiale (var car elle évolue en jeu)
+const MAX_SPEED = 700			# Plafond de vitesse
+var direction = Vector2(1, 0)	# Vecteur directionnel normalisé
 
 func début_échange(gauche_droite:int) -> void:	
-	direction.y = 0
-	SPEED = 350
+	direction.y = 0			# Repart toujours horizontalement
+	SPEED = 350				# Réinitialise la vitesse
 	if gauche_droite == 0:
-		direction.x = -1
+		direction.x = -1	# Vers le joueur 1 (gauche)
 	else:
-		direction.x = 1
+		direction.x = 1		# Vers le joueur 2 (droite)
 
 func _ready() -> void:
 	var points = []

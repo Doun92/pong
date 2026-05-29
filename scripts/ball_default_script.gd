@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var SPEED = 350 				# Vitesse initiale (var car elle évolue en jeu)
-const MAX_SPEED = 700			# Plafond de vitesse
+const MAX_SPEED = 900			# Plafond de vitesse
 var direction = Vector2(1, 0)	# Vecteur directionnel normalisé
 
 func début_échange(gauche_droite:int) -> void:	
